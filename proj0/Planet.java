@@ -87,7 +87,7 @@ public class Planet {
 			double force = calcForceExertedBy(planet[i]);
 			double forceX = ((planet[i].xxPos-this.xxPos)*force)/distance;
 			sum = sum + forceX;
-			sum = new BigDecimal(sum).setScale(1, RoundingMode.DOWN).doubleValue();
+			// sum = new BigDecimal(sum).setScale(1, RoundingMode.DOWN).doubleValue();
 		}
 		
 		// System.out.println("distance" + distance);
@@ -108,7 +108,7 @@ public class Planet {
 			double force = calcForceExertedBy(planet[i]);
 			double forceY = ((planet[i].yyPos-this.yyPos)*force)/distance;
 			sum = sum + forceY;
-			sum = new BigDecimal(sum).setScale(1, RoundingMode.DOWN).doubleValue();
+			// sum = new BigDecimal(sum).setScale(1, RoundingMode.DOWN).doubleValue();
 		}
 		
 		// System.out.println("distance" + distance);
