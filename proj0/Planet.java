@@ -83,7 +83,6 @@ public class Planet {
 				continue;
 			}
 			double distance = calcDistance(planet[i]);
-			System.out.println("distance" + distance);
 			double force = calcForceExertedBy(planet[i]);
 			double forceX = ((planet[i].xxPos-this.xxPos)*force)/distance;
 			sum = sum + forceX;
@@ -104,7 +103,6 @@ public class Planet {
 				continue;
 			}
 			double distance = calcDistance(planet[i]);
-			System.out.println("distance" + distance);
 			double force = calcForceExertedBy(planet[i]);
 			double forceY = ((planet[i].yyPos-this.yyPos)*force)/distance;
 			sum = sum + forceY;

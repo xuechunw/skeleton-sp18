@@ -86,7 +86,7 @@ public class NBody {
 
 			double time;
 
-			for(time=0; time<=T;time=time+dt){
+			for(time=0; time<T;time=time+dt){
 		
 				for(int i=0; i<numOfPlanets;i++){
 
@@ -110,6 +110,7 @@ public class NBody {
 				StdDraw.pause(20);
 
 			 }
+
 
 			 if(time==T){
 			 	StdOut.printf("%d\n", planets.length);
