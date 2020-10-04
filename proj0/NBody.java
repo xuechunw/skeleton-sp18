@@ -4,7 +4,7 @@ import java.io.*;
 
 public class NBody {
 
-	static public Integer readNumber(String fileName) {
+	private Integer readNumber(String fileName) {
 		In in = new In(fileName);
 		int numOfPlanets = in.readInt();
 
@@ -85,9 +85,12 @@ public class NBody {
 			// StdDraw.setYscale(0, radius); //bottom left to upper left
 			StdDraw.setScale(-radius,radius);
 			StdDraw.picture(0, 0, "images/starfield.jpg",2*radius,2*radius); //centered
-			Planet.draw(planets);
+			for(int i=0;i<planets.length;i++) {
+					planets[i].draw();
+			// System.out.println("images/"+planets[i].imgFileName);
+				}
 
-			 StdDraw.enableDoubleBuffering();
+			StdDraw.enableDoubleBuffering();
 
 			Double[] xForces = new Double[numOfPlanets];
 			Double[] yForces = new Double[numOfPlanets];
@@ -116,7 +119,11 @@ public class NBody {
 				}
 
 				StdDraw.picture(0, 0, "images/starfield.jpg",2*radius,2*radius); //centered
-				Planet.draw(planets);
+				
+				for(int i=0;i<planets.length;i++) {
+					planets[i].draw();
+			// System.out.println("images/"+planets[i].imgFileName);
+				}
 				StdDraw.show();
 				StdDraw.pause(20);
 

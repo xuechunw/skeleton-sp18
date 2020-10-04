@@ -15,7 +15,7 @@ public class Planet {
 	public double yyVel;
 	public double mass;
 	public String imgFileName;
-	public static final double G = 6.674*Math.pow(10,-11);
+	private static final double G = 6.674*Math.pow(10,-11);
 
 	//constructor one
 	public Planet(double xP, double yP, double xV, double yV, double m, String img) {
@@ -126,14 +126,11 @@ public class Planet {
 
 	}
 
-	public static void draw(Planet[] planets) {
-		int i;
-		for(i=0;i<planets.length;i++) {
-			StdDraw.picture(planets[i].xxPos, planets[i].yyPos, "images/"+planets[i].imgFileName);
+	public void draw() {
+
+		StdDraw.picture(this.xxPos, this.yyPos, "images/"+this.imgFileName);
 			// System.out.println("images/"+planets[i].imgFileName);
 		}
 
 	}
 
-
-}
